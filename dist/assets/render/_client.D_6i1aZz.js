@@ -1,1 +1,0 @@
-import{r as o}from"../static/index-D6sq2Auz.js";import{r as a}from"../static/index-CPH0DYhJ.js";import"../static/commonjsHelpers-DZNb-E5g.js";const p=async e=>{const{Page:r,pageProps:t}=e;o.hydrate(a.createElement(r,{...t}),document.getElementById("reactele"))};export{p as render};
