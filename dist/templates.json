@@ -1,9 +1,10 @@
 {
-  "responseHeaders": [
+  "features": [
     {
-      "pathPattern": "^widgets/.*",
-      "headerKey": "Access-Control-Allow-Origin",
-      "headerValues": ["*"]
+      "name": "static",
+      "templateType": "JS",
+      "staticPage": {}
     }
-  ] 
+  ],
+  "streams": []
 }
