@@ -12,10 +12,6 @@ import Banner from "../components/Banner";
 import PageLayout from "../components/PageLayout";
 import Favicon from "../assets/images/yext-favicon.ico";
 
-export const config: TemplateConfig = {
-  name: "404",
-};
-
 export const getPath: GetPath<TemplateProps> = () => {
   return `404.html`;
 };

@@ -19,15 +19,6 @@ import Favicon from "../assets/images/yext-favicon.ico";
 import Banner from "../components/Banner";
 
 /**
- * Not required depending on your use case.
- */
-export const config: TemplateConfig = {
-  // The name of the feature. If not set the name of this file will be used (without extension).
-  // Use this when you need to override the feature name.
-  name: "turtlehead-tacos",
-};
-
-/**
  * A local type for transformProps. This could live in src/types but it's generally
  * best practice to keep unshared types local to their usage.
  */
