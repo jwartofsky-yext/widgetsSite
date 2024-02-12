@@ -172,12 +172,5 @@
       "source": "knowledgeGraph",
       "destination": "pages"
     }
-  ],
-  "responseHeaders": [
-    {
-      "pathPattern": "^widgets/.*",
-      "headerKey": "Access-Control-Allow-Origin",
-      "headerValues": ["*"]
-    }
-  ] 
+  ]
 }
