@@ -13,29 +13,6 @@ import {
   HeadConfig,
 } from "@yext/pages";
 
-export const config: TemplateConfig = {
-  stream: {
-    $id: "root-stream",
-    filter: {
-      entityTypes: ["ce_root"],
-    },
-    fields: [
-      "id",
-      "uid",
-      "meta",
-      "name",
-      "slug",
-      "dm_directoryChildren.name",
-      "dm_directoryChildren.slug",
-      "dm_directoryChildren.c_addressRegionDisplayName",
-      "dm_directoryChildren.dm_childEntityIds",
-    ],
-    localization: {
-      locales: ["en"],
-    },
-  },
-};
-
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug;
 };

@@ -14,7 +14,6 @@ import {
   GetRedirects,
   HeadConfig,
   Template,
-  TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
   TransformProps,
@@ -27,47 +26,6 @@ import Details from "../components/Details";
 import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import BreadCrumbs from "../components/Breadcrumbs";
-
-/**
- * Required when Knowledge Graph data is used for a template.
- */
-export const config: TemplateConfig = {
-  stream: {
-    $id: "location-stream",
-    // Defines the scope of entities that qualify for this stream.
-    // You can use entityTypes, savedFilterIds, and/or entityIds
-    filter: {
-      entityTypes: ["location"],
-    },
-    // Specifies the exact data that each generated document will contain.
-    // This data is passed in directly as props to the default exported function.
-    fields: [
-      "id",
-      "uid",
-      "meta",
-      "name",
-      "address",
-      "mainPhone",
-      "description",
-      "hours",
-      "slug",
-      "geocodedCoordinate",
-      "services",
-      "photoGallery",
-      "dm_directoryParents.name",
-      "dm_directoryParents.slug",
-      "dm_directoryParents.meta",
-      "dm_directoryParents.c_addressRegionDisplayName",
-    ],
-    // The entity language profiles that documents will be generated for.
-    localization: {
-      locales: ["en"],
-    },
-    transform: {
-      replaceOptionValuesWithDisplayNames: ["paymentOptions"],
-    },
-  },
-};
 
 /**
  * Defines the path that the generated file will live at for production.

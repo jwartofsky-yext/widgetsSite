@@ -14,7 +14,6 @@ import {
   GetRedirects,
   HeadConfig,
   Template,
-  TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
   TransformProps,
@@ -25,35 +24,6 @@ import Banner from "../components/Banner";
 import DirectoryCityGrid from "../components/DirectoryCityGrid";
 import PageLayout from "../components/PageLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
-
-export const config: TemplateConfig = {
-  stream: {
-    $id: "city-stream",
-    filter: {
-      entityTypes: ["ce_city"],
-    },
-    fields: [
-      "id",
-      "uid",
-      "meta",
-      "name",
-      "description",
-      "slug",
-      "c_addressRegionDisplayName",
-      "dm_directoryParents.name",
-      "dm_directoryParents.slug",
-      "dm_directoryParents.meta",
-      "dm_directoryParents.c_addressRegionDisplayName",
-      "dm_directoryChildren.name",
-      "dm_directoryChildren.address",
-      "dm_directoryChildren.mainPhone",
-      "dm_directoryChildren.slug",
-    ],
-    localization: {
-      locales: ["en"],
-    },
-  },
-};
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `${document.slug.toString()}`;

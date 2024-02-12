@@ -4,7 +4,6 @@ import {
   GetRedirects,
   HeadConfig,
   Template,
-  TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
   TransformProps,
@@ -15,34 +14,6 @@ import Banner from "../components/Banner";
 import DirectoryStateGrid from "../components/DirectoryStateGrid";
 import PageLayout from "../components/PageLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
-
-export const config: TemplateConfig = {
-  stream: {
-    $id: "state-stream",
-    filter: {
-      entityTypes: ["ce_state"],
-    },
-    fields: [
-      "id",
-      "uid",
-      "meta",
-      "name",
-      "description",
-      "slug",
-      "c_addressRegionDisplayName",
-      "dm_directoryParents.name",
-      "dm_directoryParents.slug",
-      "dm_directoryParents.meta",
-      "dm_directoryChildren.name",
-      "dm_directoryChildren.slug",
-      "dm_directoryChildren.dm_childEntityIds",
-      "dm_childEntityIds",
-    ],
-    localization: {
-      locales: ["en"],
-    },
-  },
-};
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return `${document.slug.toString()}`;
