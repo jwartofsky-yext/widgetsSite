@@ -1,10 +1,11 @@
 {
-  "features": [
+  "responseHeaders": [
     {
-      "name": "static",
-      "templateType": "JS",
-      "staticPage": {}
+      "pathPattern": ".+",
+      "headerKey": "Access-Control-Allow-Origin",
+      "headerValues": [
+          "*"
+      ]
     }
-  ],
-  "streams": []
+  ]
 }

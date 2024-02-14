@@ -5,6 +5,7 @@ export const config: WidgetConfig = {
 }
 
 const Search: Widget = () => {
+  console.log("hello")
   return(
     <div>
       search?
