@@ -1,5 +1,6 @@
 import { Widget, WidgetConfig, WidgetModule } from "@yext/pages/*";
-import * as ReactDOMServer from "react-dom/server";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 export const config: WidgetConfig = {
   name: "search"
@@ -18,12 +19,18 @@ export const module: WidgetModule = {
   config: config, 
   default: Search
 }
+if (typeof window !== 'undefined') {
+  const searchContainer = document.getElementById("searchContainer");
+  if (!searchContainer) {
+    throw new Error('could not find "searchContainer" element');
+  }
 
-const render = () => {
-  const viewHtml = ReactDOMServer.renderToString(<Search/>);
-  return viewHtml;
-};
-
-render();
+  ReactDOM.render(
+    <React.StrictMode>
+      <Search/>
+    </React.StrictMode>,
+    searchContainer
+  );
+}
 
 export default Search;
