@@ -8,5 +8,6 @@ localData/
 sites-config/features.json
 functions/functionMetadata.json
 *.local
+./dist
 
 .DS_Store

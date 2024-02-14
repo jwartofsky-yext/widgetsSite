@@ -8,3 +8,9 @@ buildConfiguration:
       - .npmrc
 livePreviewConfiguration:
   setupCommand: ":"
+responseHeaders:
+- 
+  pathPattern: .*
+  headerKey: Access-Control-Allow-Origin
+  headerValues:
+    - "*"
