@@ -1,4 +1,5 @@
 import { Widget, WidgetConfig, WidgetModule } from "@yext/pages/*";
+import * as ReactDOMServer from "react-dom/server";
 
 export const config: WidgetConfig = {
   name: "search"
@@ -17,5 +18,12 @@ export const module: WidgetModule = {
   config: config, 
   default: Search
 }
+
+const render = () => {
+  const viewHtml = ReactDOMServer.renderToString(<Search/>);
+  return viewHtml;
+};
+
+render();
 
 export default Search;
