@@ -4,10 +4,6 @@ export const config: WidgetConfig = {
   name: "search"
 }
 
-export const getPath = () => {
-  return "search";
-}
-
 const Search: Widget = () => {
   return(
     <div>

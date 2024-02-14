@@ -9,9 +9,7 @@
     "_server": "assets/render/_server.CTyPgfkt.js",
     "_client": "assets/render/_client.D9ws_9GQ.js"
   },
-  "widgetPaths": {
-    "search": "widgets/search.umd.js"
-  },
+  "widgetPaths": {},
   "projectStructure": {
     "rootFolders": {
       "source": "src",
