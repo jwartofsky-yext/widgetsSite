@@ -8,7 +8,7 @@ const App = () => {
         <h1 className="text-2xl font-bold text-blue-500">Tailwind???</h1>
       </div>
       <div className="primary-cta">
-
+        I forgot to put anything here 
       </div>
     </>
   );
