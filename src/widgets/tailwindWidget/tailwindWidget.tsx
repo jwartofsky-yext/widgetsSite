@@ -1,5 +1,5 @@
 import { Widget, WidgetConfig } from "@yext/pages/*";
-import "../index.css";
+import "./index.css";
 
 const App = () => {
   return (
