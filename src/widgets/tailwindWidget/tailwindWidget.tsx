@@ -17,11 +17,11 @@ export const config: WidgetConfig = {
   name: "tailwindWidget"
 }
 
-export const tailwindWidget: Widget = () => {
+export const TailwindWidget: Widget = () => {
   console.log("hello")
   return(
     <div>
       <App/>
     </div>
   )
-}
+};
