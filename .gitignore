@@ -1,5 +1,6 @@
 node_modules/
 localData/
+dist/
 .yext
 .yextrc
 .artifact-output
