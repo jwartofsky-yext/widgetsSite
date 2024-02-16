@@ -1,5 +1,5 @@
 import { Widget, WidgetConfig, WidgetModule } from "@yext/pages/*";
-import { PageRouter } from "../../common/pages/PageRouter";
+import { SimpleJSX } from "../../common/simpleTest";
 
 export const config: WidgetConfig = {
   name: "search"
@@ -9,7 +9,7 @@ const Search: Widget = () => {
   console.log("hello")
   return(
     <div>
-      <PageRouter/>
+      <SimpleJSX/>
     </div>
   )
 }
