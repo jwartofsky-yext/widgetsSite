@@ -1,27 +1,41 @@
-import type { Config } from 'tailwindcss'
-import { ComponentsContentPath } from '@yext/search-ui-react'
+import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}", ComponentsContentPath],
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./node_modules/@yext/search-ui-react/**/*.{html,js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: "'Arial','Helvetica','sans-serif','system'",
+        secondary: "'Arial','Helvetica','sans-serif','system'",
+      },
+      fontSize: {
+        sm: ["14px", "22px"],
+        base: ["16px", "24px"],
+        lg: ["18px", "24px"],
+      },
       colors: {
-        primary: "var(--primary-color, #2563eb)",
-        "primary-light": "var(--primary-color-light, #dbeafe)",
-        "primary-dark": "var(--primary-color-dark, #1e40af)",
-        neutral: "var(--neutral-color, #4b5563)",
-        "neutral-light": "var(--neutral-color-light, #9ca3af)",
-        "neutral-dark": "var(--neutral-color-dark, #1f2937)",
+        text: "black",
+        "brand-primary": "#1B78D0",
+        "brand-secondary": "#073866",
+        "brand-gray": {
+          100: "#F7F7F7",
+          200: "#EDEDED",
+          300: "#CCC",
+          400: "#767676",
+        },
       },
-      borderRadius: {
-        cta: "var(--cta-border-radius, 1rem)",
-      },
-      keyframes: {
-        rotate: {
-          "100%": { transform: "rotate(360deg)" },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
         },
       },
     },
-  },
-  plugins: [],
-} satisfies Config
+  }
+} as Config;
