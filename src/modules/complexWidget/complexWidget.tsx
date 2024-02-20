@@ -1,11 +1,11 @@
-import { Widget, WidgetConfig } from "@yext/pages/*";
+import { Module, ModuleConfig } from "@yext/pages/*";
 import * as React from "react";
 
-export const config: WidgetConfig = {
-  name: "complexWidget"
+export const config: ModuleConfig = {
+  name: "complexModule"
 }
 
-const Search: Widget = () => {
+const Search: Module = () => {
   console.log("hello")
   return(
     <div>

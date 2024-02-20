@@ -1,6 +1,5 @@
 import { Pagination, ResultsCount, SearchBar, SpellCheck, StandardCard, VerticalConfigMap, VerticalResults } from '@yext/search-ui-react';
 import { v4 as uuidv4 } from 'uuid';
-import { SearchStyleProvider } from './SearchStyle';
 import { SearchHeadlessProvider, provideHeadless } from '@yext/search-headless-react';
 
 const config = {
@@ -30,18 +29,14 @@ const verticalConfigMap: VerticalConfigMap = {
 function App() {
   return (
     <SearchHeadlessProvider searcher={searcher}>
-    <div className="px-4 py-8">
-      <div className="mx-auto flex max-w-5xl flex-col">
         <SearchBar placeholder='Search...'/>
         <SpellCheck />
         <ResultsCount />
         <VerticalResults
           CardComponent={StandardCard}
-          displayAllOnNoResults={false}
+          displayAllOnNoResults={true}
         />
-      </div>
       <Pagination />
-    </div>
     </SearchHeadlessProvider>
   );
 }

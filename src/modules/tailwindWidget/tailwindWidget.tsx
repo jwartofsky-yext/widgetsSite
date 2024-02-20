@@ -1,4 +1,4 @@
-import { Widget, WidgetConfig } from "@yext/pages/*";
+import { Module, ModuleConfig } from "@yext/pages/*";
 import "./index.css";
 
 const App = () => {
@@ -16,11 +16,11 @@ const App = () => {
 
 export default App;
 
-export const config: WidgetConfig = {
-  name: "tailwindWidget"
+export const config: ModuleConfig = {
+  name: "tailwindModule"
 }
 
-export const TailwindWidget: Widget = () => {
+export const TailwindModule: Module = () => {
   console.log("hello")
   return(
     <div>

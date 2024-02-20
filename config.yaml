@@ -10,7 +10,7 @@ livePreviewConfiguration:
   setupCommand: ":"
 responseHeaders:
 - 
-  pathPattern: ^widgets/.*
+  pathPattern: ^modules/.*
   headerKey: Access-Control-Allow-Origin
   headerValues:
     - "*"

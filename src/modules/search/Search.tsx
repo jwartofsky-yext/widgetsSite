@@ -1,11 +1,11 @@
-import { Widget, WidgetConfig, WidgetModule } from "@yext/pages/*";
+import { Module, ModuleConfig, ModuleModule } from "@yext/pages/*";
 import SearchApp from "../../common/searchApp";
 
-export const config: WidgetConfig = {
+export const config: ModuleConfig = {
   name: "search"
 }
 
-const Search: Widget = () => {
+const Search: Module = () => {
   console.log("hello")
   return(
     <div>
@@ -14,7 +14,7 @@ const Search: Widget = () => {
   )
 }
 
-export const module: WidgetModule = {
+export const module: ModuleModule = {
   config: config, 
   default: Search
 }
