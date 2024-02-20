@@ -1,7 +1,8 @@
 import { provideHeadless, SearchHeadlessProvider } from '@yext/search-headless-react';
-import { SearchBar, UniversalResults, VerticalConfigMap } from '@yext/search-ui-react';
+import { SearchBar, StandardCard, StandardSection, UniversalResults, VerticalConfigMap } from '@yext/search-ui-react';
 import { v4 as uuidv4 } from 'uuid';
 import '@yext/search-ui-react/bundle.css'
+import { SearchStyleProvider } from './SearchStyle';
 
 const config = {
   apiKey: 'ceedc10c919e565fd610f6240736ea81',
@@ -20,18 +21,33 @@ if (!sessionId) {
 }
 searcher.setSessionId(sessionId ?? 'sessionId');
 
-const verticalConfigMap: VerticalConfigMap = {
-  help_articles: {
-    label: "Help Articles"
-  }
-}
+export const verticalConfig: VerticalConfigMap<Record<string, any>> = {
+  characters: {
+    label: "Characters",
+    viewAllButton: true,
+    CardComponent: StandardCard,
+    SectionComponent: StandardSection,
+  },
+  locations: {
+    label: "Locations",
+    viewAllButton: true,
+    CardComponent: StandardCard,
+    SectionComponent: StandardSection,
+  },
+};
 
 function App() {
   return (
-    <SearchHeadlessProvider searcher={searcher}>
-      <SearchBar />
-      <UniversalResults verticalConfigMap={verticalConfigMap}/>
-    </SearchHeadlessProvider>
+    <SearchStyleProvider>
+      <SearchHeadlessProvider searcher={searcher}>
+        <SearchBar placeholder="Search..." 
+          customCssClasses={{
+          searchBarContainer: "SearchBar",
+          inputElement: "py-2.5 px-5 text-lg",
+        }} />
+        <UniversalResults verticalConfigMap={verticalConfig}/>
+      </SearchHeadlessProvider>
+    </SearchStyleProvider>
   );
 }
 
