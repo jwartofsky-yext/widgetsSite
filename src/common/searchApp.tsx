@@ -29,22 +29,20 @@ const verticalConfigMap: VerticalConfigMap = {
 
 function App() {
   return (
-    <SearchStyleProvider>
-      <SearchHeadlessProvider searcher={searcher}>
-      <div className="px-4 py-8">
-        <div className="mx-auto flex max-w-5xl flex-col">
-          <SearchBar placeholder='Search...'/>
-          <SpellCheck />
-          <ResultsCount />
-          <VerticalResults
-            CardComponent={StandardCard}
-            displayAllOnNoResults={false}
-          />
-        </div>
-        <Pagination />
+    <SearchHeadlessProvider searcher={searcher}>
+    <div className="px-4 py-8">
+      <div className="mx-auto flex max-w-5xl flex-col">
+        <SearchBar placeholder='Search...'/>
+        <SpellCheck />
+        <ResultsCount />
+        <VerticalResults
+          CardComponent={StandardCard}
+          displayAllOnNoResults={false}
+        />
       </div>
-      </SearchHeadlessProvider>
-    </SearchStyleProvider>
+      <Pagination />
+    </div>
+    </SearchHeadlessProvider>
   );
 }
 
