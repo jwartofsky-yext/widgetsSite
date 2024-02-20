@@ -5,5 +5,8 @@ export default {
   theme: {
     extend: {},
   },
+  purge: {
+    content: ['./src/modules/tailwindWidget/**/*.{html,js,jsx,ts,tsx}'],
+  },
   plugins: [],
 } satisfies Config
