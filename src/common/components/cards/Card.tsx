@@ -1,4 +1,3 @@
-import * as React from "react";
 import c from "classnames";
 
 type CardProps = {

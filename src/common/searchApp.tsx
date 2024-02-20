@@ -1,8 +1,9 @@
 import { provideHeadless, SearchHeadlessProvider } from '@yext/search-headless-react';
-import { SearchBar, StandardCard, StandardSection, UniversalResults, VerticalConfigMap } from '@yext/search-ui-react';
+import { SearchBar, UniversalResults, VerticalConfigMap } from '@yext/search-ui-react';
 import { v4 as uuidv4 } from 'uuid';
-import '@yext/search-ui-react/bundle.css'
 import { SearchStyleProvider } from './SearchStyle';
+import StandardCard from './components/cards/StandardCard';
+import StandardSection from './components/sections/StandardSection';
 
 const config = {
   apiKey: 'ceedc10c919e565fd610f6240736ea81',
