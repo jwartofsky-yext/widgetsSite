@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import '@yext/search-ui-react/bundle.css'
 
 const config = {
-  apiKey: '<apiKey>',
-  experienceKey: '<experienceKey>',
+  apiKey: 'ceedc10c919e565fd610f6240736ea81',
+  experienceKey: 'default',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
 }
