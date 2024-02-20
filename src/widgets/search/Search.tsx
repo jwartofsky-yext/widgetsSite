@@ -1,4 +1,5 @@
 import { Widget, WidgetConfig, WidgetModule } from "@yext/pages/*";
+import SearchApp from "../../common/searchApp";
 
 export const config: WidgetConfig = {
   name: "search"
