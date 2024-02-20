@@ -17,3 +17,7 @@
 .secondary-cta {
   @apply bg-sky-700 hover:bg-sky-800;
 }
+
+.label {
+  @apply bg-sky-500
+}

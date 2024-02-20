@@ -1,4 +1,4 @@
-import { Module, ModuleConfig, ModuleModule } from "@yext/pages/*";
+import { Module, ModuleConfig } from "@yext/pages/*";
 
 export const config: ModuleConfig = {
   name: "simpleModule"
@@ -11,11 +11,6 @@ const Search: Module = () => {
       search?
     </div>
   )
-}
-
-export const module: ModuleModule = {
-  config: config, 
-  default: Search
 }
 
 export default Search;

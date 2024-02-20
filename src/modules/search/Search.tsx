@@ -1,4 +1,4 @@
-import { Module, ModuleConfig, ModuleModule } from "@yext/pages/*";
+import { Module, ModuleConfig } from "@yext/pages/*";
 import SearchApp from "../../common/searchApp";
 import "./index.css";
 
@@ -13,11 +13,6 @@ const Search: Module = () => {
       <SearchApp/>
     </div>
   )
-}
-
-export const module: ModuleModule = {
-  config: config, 
-  default: Search
 }
 
 export default Search;
