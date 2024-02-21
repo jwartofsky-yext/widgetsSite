@@ -9,19 +9,19 @@ buildConfiguration:
 livePreviewConfiguration:
   setupCommand: ":"
 responseHeaders:
-  - pathPattern: ^modules/tailwindWidget/.*
+  - pathPattern: ^modules/tailwindWidget.*
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
-  - pathPattern: ^modules/potato/.*
+  - pathPattern: ^modules/potato.*
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
-  - pathPattern: ^modules/search/.*
+  - pathPattern: ^modules/search.*
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
-  - pathPattern: ^modules/complexWidget/.*
+  - pathPattern: ^modules/complexWidget.*
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
