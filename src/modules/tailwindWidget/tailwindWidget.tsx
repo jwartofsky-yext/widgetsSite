@@ -1,5 +1,5 @@
 import { Module, ModuleConfig } from "@yext/pages/*";
-import "./index.css";
+import "../../index.css";
 
 const App = () => {
   return (
@@ -17,10 +17,10 @@ const App = () => {
 export default App;
 
 export const config: ModuleConfig = {
-  name: "tailwindModule"
+  name: "tailwindWidget"
 }
 
-export const TailwindModule: Module = () => {
+export const TailwindWidget: Module = () => {
   console.log("hello")
   return(
     <div>

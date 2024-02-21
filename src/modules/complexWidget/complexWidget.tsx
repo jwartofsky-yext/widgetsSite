@@ -2,7 +2,7 @@ import { Module, ModuleConfig } from "@yext/pages/*";
 import * as React from "react";
 
 export const config: ModuleConfig = {
-  name: "complexModule"
+  name: "complexWidget"
 }
 
 const Search: Module = () => {
