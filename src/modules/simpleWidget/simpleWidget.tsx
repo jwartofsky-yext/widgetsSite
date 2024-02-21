@@ -1,7 +1,7 @@
 import { Module, ModuleConfig } from "@yext/pages/*";
 
 export const config: ModuleConfig = {
-  name: "simpleWidget"
+  name: "potato"
 }
 
 const Search: Module = () => {

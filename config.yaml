@@ -9,28 +9,4 @@ buildConfiguration:
 livePreviewConfiguration:
   setupCommand: ":"
 responseHeaders:
-  - pathPattern: ^modules/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  - pathPattern: ^modules/tailwindWidget/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  - pathPattern: ^modules/simpleModule/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  - pathPattern: ^modules/simpleWidget/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  - pathPattern: ^modules/search/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  - pathPattern: ^modules/complexWidget/.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
-  # This response header allows access to your modules from other sites
+ 
