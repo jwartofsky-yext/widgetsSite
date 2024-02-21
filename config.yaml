@@ -8,5 +8,4 @@ buildConfiguration:
       - .npmrc
 livePreviewConfiguration:
   setupCommand: ":"
-responseHeaders:
  
