@@ -25,4 +25,8 @@ responseHeaders:
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
+  - pathPattern: ^modules/prefix.*
+    headerKey: Access-Control-Allow-Origin
+    headerValues:
+      - "*"
   # This response header allows access to your modules from other sites
