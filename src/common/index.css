@@ -1,7 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+.tailwind {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}
 .centered-container {
   @apply mx-auto px-5 md:px-14 max-w-screen-xl;
 }
