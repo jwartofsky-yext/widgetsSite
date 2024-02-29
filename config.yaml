@@ -8,6 +8,7 @@ buildConfiguration:
       - .npmrc
 livePreviewConfiguration:
   setupCommand: ":"
+# The ^modules/ header allows access to your modules from other sites
 responseHeaders:
   - pathPattern: ^modules/tailwindWidget.*
     headerKey: Access-Control-Allow-Origin
@@ -21,12 +22,11 @@ responseHeaders:
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
-  - pathPattern: ^modules/complexWidget.*
-    headerKey: Access-Control-Allow-Origin
-    headerValues:
-      - "*"
   - pathPattern: ^modules/prefix.*
     headerKey: Access-Control-Allow-Origin
     headerValues:
       - "*"
-  # This response header allows access to your modules from other sites
+  - pathPattern: ^modules/complexWidget.*
+    headerKey: Access-Control-Allow-Origin
+    headerValues:
+      - "*"

@@ -6,7 +6,8 @@ const __dirname = path.dirname(__filename);
 
 export default {
   plugins: {
-    'tailwindcss/nesting': {},
+    'postcss-import': {},
+    'tailwindcss/nesting': 'postcss-nesting',
     tailwindcss: { config: path.join(__dirname, 'tailwind.config.ts')},
     autoprefixer: {},
   },

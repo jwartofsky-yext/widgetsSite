@@ -3,14 +3,14 @@ import "../../index.css";
 
 const App = () => {
   return (
-    <>
+    <div className="tailwind">
       <div className="bg-gray-100 p-4">
         <h1 className="text-2xl font-bold text-blue-500">Tailwind???</h1>
       </div>
       <div className="primary-cta">
         I forgot to put anything here 
       </div>
-    </>
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ const Search: Module = () => {
   console.log("hello")
   return(
     <div>
-      search?
+      potato?
     </div>
   )
 }
