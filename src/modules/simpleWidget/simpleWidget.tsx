@@ -5,7 +5,7 @@ export const config: ModuleConfig = {
 }
 
 const Search: Module = () => {
-  console.log("hello")
+  console.log("potato")
   return(
     <div>
       potato?

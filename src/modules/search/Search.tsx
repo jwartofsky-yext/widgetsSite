@@ -7,7 +7,7 @@ export const config: ModuleConfig = {
 }
 
 const Search: Module = () => {
-  console.log("hello")
+  console.log("search")
   return(
     <div className="tailwind">
       <SearchApp/>
