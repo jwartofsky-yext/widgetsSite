@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { SearchStyleProvider } from './SearchStyle';
 import StandardCard from './components/cards/StandardCard';
 import StandardSection from './components/sections/StandardSection';
+import * as React from 'react';
 
 const config = {
   apiKey: 'ceedc10c919e565fd610f6240736ea81',
@@ -11,16 +12,6 @@ const config = {
   locale: 'en',
   experienceVersion: 'PRODUCTION',
 }
-
-const searcher = provideHeadless(config);
-
-searcher.setSessionTrackingEnabled(true);
-let sessionId = window.sessionStorage.getItem('sessionId');
-if (!sessionId) {
-  sessionId = uuidv4();
-  window.sessionStorage.setItem('sessionId', sessionId ?? 'sessionId');
-}
-searcher.setSessionId(sessionId ?? 'sessionId');
 
 export const verticalConfig: VerticalConfigMap<Record<string, any>> = {
   characters: {
@@ -38,6 +29,17 @@ export const verticalConfig: VerticalConfigMap<Record<string, any>> = {
 };
 
 function App() {
+  const searcher = provideHeadless(config);
+  React.useEffect(() => {
+    searcher.setSessionTrackingEnabled(true);
+    let sessionId = window.sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = uuidv4();
+      window.sessionStorage.setItem('sessionId', sessionId ?? 'sessionId');
+    }
+    searcher.setSessionId(sessionId ?? 'sessionId');
+  }, []);
+
   return (
     <SearchStyleProvider>
       <SearchHeadlessProvider searcher={searcher}>

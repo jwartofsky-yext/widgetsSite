@@ -2,7 +2,8 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./**/*.{html,js,jsx,ts,tsx}",
+    "./src/modules/**/*.{html,js,jsx,ts,tsx}",
+    "./src/common/**/*.{html,js,jsx,ts,tsx}",
     "./node_modules/@yext/search-ui-react/**/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
